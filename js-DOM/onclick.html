@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM (onclick)</title>
+</head>
+
+<body>
+
+    <h1>Change background with buttion click</h1>
+
+    <button id="black-bg" onclick="blackBg()">black-bg</button>
+    <button id="green-bg" onclick="greenBg()">green-bg</button>
+    <button id="violet-bg" onclick="violetBg()">violet-bg</button>
+    <button id="blue-bg" onclick="blueBg()">blue-bg</button>
+    <button id="tomato-bg" onclick="tomatoBg()">tomatd-bg</button>
+
+</body>
+
+<script>
+
+    
+    // 1
+    const cngStyle = document.getElementById('black-bg')
+    function blackBg() {
+        document.body.style.backgroundColor = 'black';
+        document.body.style.textAlign = 'center';
+        document.body.style.color = 'white';
+        cngStyle.style.border = 'none';
+        cngStyle.style.backgroundColor = 'red';
+        cngStyle.style.fontSize = '16px';
+        cngStyle.style.padding = '10px';
+        cngStyle.style.borderRadius = '10px';
+        cngStyle.style.color = 'white';
+    }
+    // 2
+    const cngStyle2 = document.getElementById('green-bg')
+    function greenBg() {
+        document.body.style.backgroundColor = 'green';
+        document.body.style.textAlign = 'center';
+        document.body.style.color = 'white';
+        cngStyle2.style.border = 'none';
+        cngStyle2.style.backgroundColor = 'tomato';
+        cngStyle2.style.fontSize = '16px';
+        cngStyle2.style.padding = '10px';
+        cngStyle2.style.borderRadius = '10px';
+        cngStyle2.style.color = 'white';
+    }
+    // 3
+    const cngStyle3 = document.getElementById('violet-bg')
+    function violetBg() {
+        document.body.style.backgroundColor = 'violet';
+        document.body.style.textAlign = 'center';
+        document.body.style.color = 'white';
+        cngStyle3.style.border = 'none';
+        cngStyle3.style.backgroundColor = 'grey';
+        cngStyle3.style.fontSize = '16px';
+        cngStyle3.style.padding = '10px';
+        cngStyle3.style.borderRadius = '10px';
+        cngStyle3.style.color = 'white';
+    }
+    // 4
+    const cngStyle4 = document.getElementById('blue-bg')
+    function blueBg() {
+        document.body.style.backgroundColor = 'blue';
+        document.body.style.textAlign = 'center';
+        document.body.style.color = 'white';
+        cngStyle4.style.border = 'none';
+        cngStyle4.style.backgroundColor = 'violet';
+        cngStyle4.style.fontSize = '16px';
+        cngStyle4.style.padding = '10px';
+        cngStyle4.style.borderRadius = '10px';
+        cngStyle4.style.color = 'white';
+    }
+    // 5
+    const cngStyle5 = document.getElementById('tomato-bg')
+    function tomatoBg() {
+        document.body.style.backgroundColor = 'tomato';
+        document.body.style.textAlign = 'center';
+        document.body.style.color = 'white';
+        cngStyle5.style.border = 'none';
+        cngStyle5.style.backgroundColor = 'white';
+        cngStyle5.style.fontSize = '16px';
+        cngStyle5.style.padding = '10px';
+        cngStyle5.style.borderRadius = '10px';
+        cngStyle5.style.color = 'black';
+    }
+
+</script>
+
+</html>
