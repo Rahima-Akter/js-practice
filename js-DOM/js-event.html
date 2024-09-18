@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+</head>
+
+<body>
+
+    <h1 id="text-to-update">Change background with buttion click</h1>
+    <input type="text" id="inputBox"><button id="update">update</button>
+
+    <button id="black-bg">black-bg</button>
+
+    <!-- add comment -->
+    <br>
+    <br>
+    <br>
+    <div id="comment-container">
+        <textarea name="" id="text-area"></textarea>
+        <button id="post-btn">post</button>
+    </div>
+
+</body>
+<script>
+    // changes background
+    const blackButtion = document.getElementById('black-bg').addEventListener('click', function () {
+        document.body.style.backgroundColor = 'gold';
+    });
+
+    // updates a new text to an alredy existing text
+    const x = document.getElementById('update').addEventListener('click', function () {
+        const cngText = document.getElementById('inputBox').value;
+        // const Text = cngText.value;
+        const p = document.getElementById('text-to-update')
+        p.innerText = cngText;
+    })
+
+    // add a new comment using addeventListener
+    document.getElementById('post-btn').addEventListener('click', function () {
+        const commentBox = document.getElementById('text-area').value;
+        const commentContainer = document.getElementById('comment-container');
+        const newComment = document.createElement('p');
+        newComment.innerText = commentBox;
+        commentContainer.appendChild(newComment);
+    });
+
+
+</script>
+
+</html>
