@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="secret-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, magnam!</p>
+    <input type="text" placeholder="Write delete" id="confirm-dlt">
+    <button id="delete-btn" disabled>delete</button>
+
+</body>
+<script>
+
+    document.getElementById('confirm-dlt').addEventListener('keyup', function(event){
+        const x = event.target.value;
+        const y = document.getElementById('delete-btn')
+        if(x === 'delete'){
+            y.removeAttribute('disabled');
+        } else {
+            y.setAttribute('disabled', true)
+        }
+
+    })
+
+    document.getElementById('delete-btn').addEventListener('click', function(){
+       const text = document.getElementById('secret-info');
+       text.style.display = 'none';
+    })
+</script>
+</html>
